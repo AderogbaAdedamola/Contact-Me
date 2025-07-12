@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact Me</title>
+    
+ </head>
+ <body>
+  <section>
+   <span id = "toggle-text1">Toggle To Light Theme</span>
+   <span id = "toggle-text2">Toggle To Dark Theme</span>
+   <div class ="toggle" onclick = "toggleTheme()">
+    <div class ="toggle-switch">
+    </div>
+  </div>
+  </section>
+
+  <form action="https://formsubmit.co/aderogbaadedamola8@gmail.com" method = "POST" class="form">
+    <center><h1>Contact Me</h1></center>
+    <div class="input-container">
+      <input type="text" id="name" placeholder=" " required>
+      <label for="name">Full Name</label>
+    </div>
+
+    <div class="input-container">
+      <input type="email" id="email" placeholder=" " required>
+      <label for="email">Email Address</label>
+    </div>
+
+    <div class="input-container">
+      <input type="tel" id="phone" placeholder=" " required>
+      <label for="phone">Phone Number</label>
+    </div>
+    <div class="input-container">
+      <textarea name="message" id="message"  rows="3" placeholder=" " required></textarea>
+      <label for="message">Message</label>
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+  <br>
+<footer>
+  <span>By</span>
+  <Span class="myname">
+    <a href="https://github.com/AderogbaAdedamola/">Aderogba Adedamola 
+      <img src="images/githubLight.png" width="30px" height="30px" id="githubLight" alt="github image">
+      <img src="images/githubDark.png" width="35px" height="35px" id="githubDark" alt="github image">
+    </a>
+  </Span>
+</footer>
+<script src = "main.js"></script>
+
+</body>
+</html>
