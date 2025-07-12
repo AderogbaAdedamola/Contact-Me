@@ -1,1 +1,208 @@
+:root{
+    --body-bg:rgb(161, 185, 181) ;
+    --text-color: black;
+    --form-bg: rgba(255, 255, 255, 0.05);
+    --form-border: rgba(255, 255, 255, 0.15);
+    --form-shadow: rgba(0, 0, 0, 0.3);
+    --form-hover:rgba(0, 65, 95, 0.96);
+    --input-border:  rgba(0, 65, 95, 0.96);
+    --input-text-color: black;
+    --label-bg:  rgb(161, 185, 181);
+    --label-color:rgb(66, 66, 66);
+    --label-focus: rgba(0, 65, 95, 0.96);
+    --label-focus-bg: rgb(161, 185, 181);
+    --btn-bg:rgba(0, 65, 95, 0.96);
+    --btn-text: white;
+    --btn-shadow: #00c4cc;
+    --toggle-text1: none;
+    --toggle-text2: block;
+    --toggle-switch: left;
+    --img-light: inline-block;
+    --img-dark: none;
+  }
+  .dark-theme{
+    --body-bg:  #09151a;
+    --text-color: white;
+    --form-bg: rgba(255, 255, 255, 0.05);
+    --form-border: rgba(255, 255, 255, 0.15);
+    --form-shadow: rgba(0, 0, 0, 0.3);
+    --form-hover: #4aa5a8;
+    --input-border:  #00f7ff;
+    --input-text-color: white;
+    --label-bg:  rgba(15, 32, 39, 0.1);
+    --label-color: #aaa;
+    --label-focus: #00f7ff;
+    --label-focus-bg: #0F2027F5;
+    --btn-bg: #00f7ff;
+    --btn-text: black;
+    --btn-shadow: #00c4cc;
+    --toggle-text1: block;
+    --toggle-text2: none;
+    --toggle-switch: right;
+    --img-light: none;
+    --img-dark: inline-block;
+  }
+  * {
+    box-sizing: border-box;
+  }
 
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--body-bg);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: 0;
+    transition: all 0.3s ease;
+  }
+  section{
+    position: fixed;
+    top: 40px;
+    display: flex;
+    font-size: 20px;
+  }
+  .toggle{
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+    padding: 1px;
+    margin: 0 3px;
+    background: var(--btn-bg);
+    border: none;
+    border-radius: 35px;
+    color: var(--btn-text);
+    transition:box-shadow 0.3s ease;
+  }
+  .toggle:hover {
+    box-shadow: 0 0 20px var(--btn-shadow);
+  }
+  .toggle-switch{
+    float: var(--toggle-switch);
+    width: 35px;
+    height: 31px;
+    margin: 1px;
+    background-color: var(--btn-text);
+    border-radius: 35px;
+  }
+  #toggle-text1{
+    display: inline;
+    display: var(--toggle-text1)
+  }
+  #toggle-text2{
+    display: var(--toggle-text2)
+  }
+  
+  .form {
+    background:var(--form-bg);
+    border: 1px solid var(--form-border);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 8px 32px var(--form-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .form:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--form-hover);
+  }
+  h1{
+    margin: 7px auto;
+  }
+
+  .input-container {
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  input {
+    width: 100%;
+    padding: 16px 12px 8px;
+    background: transparent;
+    border: 2px solid var(--input-border);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--input-text-color);
+    outline: none;
+  }
+  textarea {
+    width: 100%;
+    padding: 16px 12px 8px;
+    background: transparent;
+    border: 2px solid var(--input-border);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--input-text-color);
+    outline: none;
+  }
+
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    background-color: var(--label-bg);
+    padding: 0 6px;
+    color: var(--label-color);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease;
+  }
+
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    top: 0;
+    transform: translateY(-50%) scale(0.85);
+    color: var(--label-focus);
+    background: var(--label-focus-bg);
+   
+  }
+  textarea:focus + label,
+  textarea:not(:placeholder-shown) + label {
+    top: 0;
+    transform: translateY(-50%) scale(0.85);
+    color: var(--label-focus);
+    background: var(--label-focus-bg);
+   
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background: var(--btn-bg);
+    border: none;
+    border-radius: 10px;
+    color: var(--btn-text);
+    font-weight: bold;
+    cursor: pointer;
+    transition:box-shadow 0.3s ease;
+  }
+
+  button:hover {
+    box-shadow: 0 0 25px var(--btn-shadow);
+  }
+  footer{
+    text-align: center;
+    margin: 10px;
+    position: fixed;
+    bottom: 10px;
+  }
+  footer span{
+    display: block;
+  }
+  .myname a{
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  #githubLight{
+    display: var(--img-light)
+  }
+  #githubDark{
+    display: var(--img-dark)
+  }
